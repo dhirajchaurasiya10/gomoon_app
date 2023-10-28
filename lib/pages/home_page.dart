@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/custom_dropdown_button.dart';
+
 class HomePage extends StatelessWidget {
   late double _deviceheight,
       _devicewidth; //2 private variables to store the values of height and width of device
@@ -11,7 +13,13 @@ class HomePage extends StatelessWidget {
     _devicewidth = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SafeArea(
-        child: Container(child: _pageTitle()),
+        child: Container(
+            height: _devicewidth,
+            width: _deviceheight,
+            padding: EdgeInsets.symmetric(
+              horizontal: _devicewidth * 0.05,
+            ),
+            child: _pageTitle()),
       ),
     );
   }
@@ -40,6 +48,16 @@ Widget _pageTitle() {
   );
 }
 
-//jastai devices anusar farak farak notches hunxa ni kasaiko 
-//camera bichma kasaiko side ma etc jsle hamro display huni 
+//jastai devices anusar farak farak notches hunxa ni kasaiko
+//camera bichma kasaiko side ma etc jsle hamro display huni
 //content lai affect garna sakxa so tyo issue lai eradicate garna lai chai safearea le kaam garxa
+
+Widget _destionationDropDownWidget() {
+  return CustomDropDownButtonClass(
+    values: const [
+      'James Webb Station',
+      'Preneure Station',
+    ],
+    width: _deviceWidth,
+  );
+}
