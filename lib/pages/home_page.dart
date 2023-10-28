@@ -66,7 +66,7 @@ class HomePage extends StatelessWidget {
     return CustomDropDownButtonClass(values: [
       'James Webb Station',
       'Preneure Station',
-    ], width: _devicewidth);
+    ], width: _devicewidth * 0.45);
   }
 
   Widget _travellersInformationWidget() {
