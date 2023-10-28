@@ -63,9 +63,9 @@ class HomePage extends StatelessWidget {
 //content lai affect garna sakxa so tyo issue lai eradicate garna lai chai safearea le kaam garxa
 
   Widget _destionationDropDownWidget() {
-    return CustomDropDownButtonClass(values: [
+    return CustomDropDownButtonClass(values: const [
       'James Webb Station',
-      'Preneure Station',
+      'Armstrong Station',
     ], width: _devicewidth * 0.45);
   }
 
