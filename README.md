@@ -17,4 +17,4 @@ samples, guidance on mobile development, and a full API reference.
 
 
 
-This idea has already been implemented by a Udemy Teacher hence it's not a new but a handful project that can be a source for all the learners.
+Go moon app is just an app idea that focuses on all the basics of flutter widgets and UI knowledges to gather at a place.This idea has already been implemented by a Udemy Teacher hence it's not a new but a handful project that can be a source for all the learners.
