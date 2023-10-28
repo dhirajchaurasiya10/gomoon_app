@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  late double _deviceheight,
+      _devicewidth; //2 private variables to store the values of height and width of device
+  HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: _pageTitle());
+    _deviceheight = MediaQuery.of(context).size.height;
+    _devicewidth = MediaQuery.of(context).size.width;
+    return Scaffold(
+      body: SafeArea(
+        child: Container(child: _pageTitle()),
+      ),
+    );
   }
 }
 
@@ -21,6 +29,7 @@ Widget _astroImageWidget() {
 }
 
 Widget _pageTitle() {
+  //here the _ means it's a private object for a class
   return const Text(
     "#GOMoon",
     style: TextStyle(
@@ -30,3 +39,7 @@ Widget _pageTitle() {
     ),
   );
 }
+
+//jastai devices anusar farak farak notches hunxa ni kasaiko 
+//camera bichma kasaiko side ma etc jsle hamro display huni 
+//content lai affect garna sakxa so tyo issue lai eradicate garna lai chai safearea le kaam garxa
