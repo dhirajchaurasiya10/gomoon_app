@@ -16,6 +16,7 @@ class App extends StatelessWidget {
         scaffoldBackgroundColor: Color.fromRGBO(31, 31, 31, 1.0),
       ),
       home: HomePage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

@@ -19,14 +19,21 @@ class HomePage extends StatelessWidget {
             padding: EdgeInsets.symmetric(
               horizontal: _devicewidth * 0.05,
             ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              mainAxisSize: MainAxisSize.max,
-              crossAxisAlignment: CrossAxisAlignment.start,
+            child: Stack(
               children: [
-                _pageTitle(),
-                _destionationDropDownWidget(),
-                _travellersInformationWidget(),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    _pageTitle(),
+                    _bookridewidget(),
+                  ],
+                ),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: _astroImageWidget(),
+                )
               ],
             )),
       ),
@@ -66,7 +73,7 @@ class HomePage extends StatelessWidget {
     return CustomDropDownButtonClass(values: const [
       'James Webb Station',
       'Armstrong Station',
-    ], width: _devicewidth * 0.45);
+    ], width: _devicewidth);
   }
 
   Widget _travellersInformationWidget() {
@@ -84,6 +91,37 @@ class HomePage extends StatelessWidget {
           width: _devicewidth * 0.40,
         ),
       ],
+    );
+  }
+
+  Widget _bookridewidget() {
+    return Container(
+      height: _deviceheight * 0.25,
+      child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            _destionationDropDownWidget(),
+            _travellersInformationWidget(),
+            _ridebutton(),
+          ]),
+    );
+  }
+
+  Widget _ridebutton() {
+    return Container(
+      padding: EdgeInsets.only(bottom: _deviceheight * 0.01),
+      width: _devicewidth,
+      decoration: BoxDecoration(
+          color: Colors.white, borderRadius: BorderRadius.circular(10)),
+      child: MaterialButton(
+        onPressed: () {},
+        child: Text(
+          "Book Ride",
+          style: TextStyle(color: Colors.black),
+        ),
+      ),
     );
   }
 }
