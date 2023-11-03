@@ -16,7 +16,7 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 
-# Getting Started
+# Running this project
 - Clone the project
 - Before runnning the application, run the following command:
   ```
